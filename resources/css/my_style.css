@@ -7,10 +7,20 @@
 .text {
     color: white;
     font-weight: 400;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .link{
   color: red;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 .container{
