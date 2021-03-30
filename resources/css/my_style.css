@@ -6,12 +6,11 @@
   
 .text {
     color: white;
-    font-family: "Avenir Next Bold";
+    font-weight: bold;
 }
 
 .container{
   background-color: #000000;
-  padding: 60px 50px;
 }
 
 
