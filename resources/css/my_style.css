@@ -1,12 +1,18 @@
 .jumbotron {
-	background-color: #f4511e;
+	background-color: #000000;
 	color: #fff;
 	padding: 100px 25px;
   }
   
-  .container-fluid {
-	padding: 60px 50px;
-  }
+.text {
+    color: white;
+    font-family: "Avenir Next Bold";
+}
+
+.container{
+  background-color: #000000;
+  padding: 60px 50px;
+}
 
 
 .slideanim {visibility:hidden;}
