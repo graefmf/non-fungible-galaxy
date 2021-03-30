@@ -37,7 +37,6 @@ const isProduction = process.env.NODE_ENV === 'production';
 dbConfig = isProduction ? process.env.DATABASE_URL : dbConfig;
 let db = pgp(dbConfig);
 
-//app.listen(3000);
 const PORT = process.env.PORT || 8080;
 
 const server = app.listen(PORT, () => {
@@ -49,20 +48,18 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/'));//This line is necessary for us to use relative paths and access our resources directory
 
 
-//home
+// home page
 app.get('/', function(req, res) {
-        // render views/store/list.ejs template file
-        res.render('pages/home',{
-			my_title: "Home Page"
-		})
+	res.render('pages/main',{
+		local_css:"style.css",
+		my_title:"Home Page"
+	});
 });
 
-//home
-app.get('/home', function(req, res) {
-    // render views/store/list.ejs template file
-    res.render('pages/home',{
-        my_title: "Home Page"
-    })
+// home page
+app.get('/main', function(req, res) {
+	res.render('pages/main',{
+		local_css:"style.css",
+		my_title:"Home Page"
+	});
 });
-
-app.listen(3000);
