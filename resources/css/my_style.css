@@ -9,6 +9,10 @@
     font-weight: 400;
 }
 
+.link{
+  color: red;
+}
+
 .container{
   background-color: #000000;
 }
