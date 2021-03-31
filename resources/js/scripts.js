@@ -23,7 +23,7 @@ function getAssets(){
             link = data.assets[0].permalink;
 
             row += `<div class="col-sm">
-                <div class="card" style="width: 20rem;">
+                <div class="card text-center" style="width: 20rem;">
                     <a href="${link}">
                         <img class="card-img-top" src="${image}" alt="No image found" width=256" height="256">
                     </a>
