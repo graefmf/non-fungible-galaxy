@@ -12,21 +12,25 @@ function getAssets(){
 
 
         var row = '<div class="row">';
-        var title;
         var owner;
+        var link;
         var image;
         var num_assets = data.assets.length;
         for(var i = 0; i < num_assets; i++){
             title = data.assets[i].name;
             image = data.assets[i].image_url;
             owner = data.assets[i].owner.user.username;
+            link = data.assets[i].permalink;
 
             row += `<div class="col-sm">
                 <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="${image}" alt="No image found">
+                    <a href="${link}">
+                        <img class="card-img-top" src="${image}" alt="No image found" width=256" height="256">
+                    </a>
                     <div class="card-body">
-                        <h5 class="card-title">${title}</h5>
-                        <h5 class="card-title">${owner}</h5>
+                        <div class="text">
+                            <h5 class="card-title">Owner: ${owner}</h5>
+                        </div>
                     </div>
                 </div>
             </div>`;
