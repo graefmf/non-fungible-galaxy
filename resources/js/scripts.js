@@ -23,7 +23,7 @@ function getAssets(){
             link = data.assets[0].permalink;
 
             deck += `<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                        <div class="card" style="width: 10rem;">
+                        <div class="card">
                             <a href="${link}">
                                 <img class="card-img-top" src="${image}" alt="No image found" style="width: 20rem;">
                             </a>
