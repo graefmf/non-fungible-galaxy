@@ -11,7 +11,7 @@ function getAssets(){
         console.log(data);
 
 
-        var row = '<div class="row">';
+        var deck = '<div class="card-deck">';
         var owner;
         var link;
         var image;
@@ -22,29 +22,19 @@ function getAssets(){
             owner = data.assets[0].owner.user.username;
             link = data.assets[0].permalink;
 
-            row += `<div class="col-sm">
-                <div class="card text-center" style="width: 20rem;">
-                    <a href="${link}">
-                        <img class="card-img-top" src="${image}" alt="No image found" width=256" height="256">
-                    </a>
-                    <div class="card-body">
-                        <div class="text">
-                            <h5 class="card-title">Owner: ${owner}</h5>
+            deck += `<div class="card text-center" style="width: 20rem;">
+                        <a href="${link}">
+                            <img class="card-img-top" src="${image}" alt="No image found" width=256" height="256">
+                        </a>
+                        <div class="card-body">
+                            <div class="text">
+                                <h5 class="card-title">Owner: ${owner}</h5>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>`;
-
-            console.log(row);
-
-            if(i == num_assets-1){
-                row += '</div>';
-            }else if((i+1)%6 == 0){
-                row += '</div>';
-                row += '<div class="row">';
-            }
+                    </div>`;
             
         }
-       $("#Solar-System").html(row);
+        deck += `</div>`;
+       $("#Solar-System").html(deck);
     });
 }
