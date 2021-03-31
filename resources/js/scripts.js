@@ -24,9 +24,9 @@ function getAssets(){
 
             deck += `<div class="card">
                         <a href="${link}">
-                            <img class="card-img-top" src="${image}" alt="No image found" width=256" height="256">
+                            <img class="card-img-top" src="${image}" alt="No image found" width="256" height="256">
                         </a>
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <div class="text">
                                 <h5 class="card-title">Owner: ${owner}</h5>
                             </div>
