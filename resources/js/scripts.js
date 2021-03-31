@@ -16,12 +16,12 @@ function getAssets(){
         var group;
         var num_assets = data.assets.length;
 
-        for(var i = 0; i < num_assets; i++){
-            title = data.assets[i].name;
-            image = data.assets[i].image_url;
-            owner = data.assets[i].owner.user.username;
-            link = data.assets[i].permalink;
-            group = (data.assets[i].traits[6].value).replace(/\s+/g, '-');
+        for(var i = 0; i < 10; i++){
+            title = data.assets[0].name;
+            image = data.assets[0].image_url;
+            owner = data.assets[0].owner.user.username;
+            link = data.assets[0].permalink;
+            group = (data.assets[0].traits[6].value).replace(/\s+/g, '-');
             console.log('#'+ group);
             $('#'+ group).append( 
                     `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
