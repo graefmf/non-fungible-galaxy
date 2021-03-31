@@ -1,5 +1,5 @@
 function getAssets(){
-    $("#Solar System").html("");
+    $("#Solar-System").html("");
 
     order_direction =  'desc';
     offset = '0';
@@ -23,7 +23,7 @@ function getAssets(){
 
             row += `<div class="col-sm">
                 <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="${image}" alt="No Poster Found">
+                    <img class="card-img-top" src="${image}" alt="No image found">
                     <div class="card-body">
                         <h5 class="card-title">${title}</h5>
                         <h5 class="card-title">${owner}</h5>
@@ -31,6 +31,7 @@ function getAssets(){
                 </div>
             </div>`;
 
+            console.log(row);
 
             if(i == num_assets-1){
                 row += '</div>';
@@ -40,6 +41,6 @@ function getAssets(){
             }
             
         }
-       $("#Solar System").html(row);
+       $("#Solar-System").html(row);
     });
 }
