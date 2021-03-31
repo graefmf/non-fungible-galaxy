@@ -38,6 +38,6 @@ function getAssets(){
                     </div>`
             );
             
-        }
+        } 
     });
 }
