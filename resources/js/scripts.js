@@ -32,7 +32,7 @@ function getAssets(){
             </div>`;
 
 
-            if(i == num_movies-1){
+            if(i == num_assets-1){
                 row += '</div>';
             }else if((i+1)%6 == 0){
                 row += '</div>';
