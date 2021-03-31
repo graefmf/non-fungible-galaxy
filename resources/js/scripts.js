@@ -21,7 +21,7 @@ function getAssets(){
             image = data.assets[i].image_url;
             owner = data.assets[i].owner.user.username;
             link = data.assets[i].permalink;
-            group = data.assets[i].traits[6].value;
+            group = (data.assets[i].traits[6].value).replace(/\s+/g, '-');
             console.log('#'+ group);
             $('#'+ group).append( 
                     `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
