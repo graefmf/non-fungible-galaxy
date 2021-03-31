@@ -26,10 +26,10 @@ function getAssets(){
                         <a href="${link}">
                             <img class="card-img-top" src="${image}" alt="No image found" width=256" height="256">
                         </a>
-                        <div class="card-body text-center">
-                            <p style="color: white; font-weight: 400; font-family: "Lucida Console", "Courier New", monospace;" class="card-title">
-                            Owner: ${owner}
-                            </p>
+                        <div class="card-body">
+                            <div class="text">
+                                <h5 class="card-title">Owner: ${owner}</h5>
+                            </div>
                         </div>
                     </div>`;
             
