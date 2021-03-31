@@ -15,12 +15,12 @@ function getAssets(){
         var owner;
         var link;
         var image;
-        var num_assets = data.assets.length;
+        var num_assets = 10;
         for(var i = 0; i < num_assets; i++){
-            title = data.assets[i].name;
-            image = data.assets[i].image_url;
-            owner = data.assets[i].owner.user.username;
-            link = data.assets[i].permalink;
+            title = data.assets[0].name;
+            image = data.assets[0].image_url;
+            owner = data.assets[0].owner.user.username;
+            link = data.assets[0].permalink;
 
             row += `<div class="col-sm">
                 <div class="card" style="width: 20rem;">
