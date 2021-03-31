@@ -22,7 +22,7 @@ function getAssets(){
             owner = data.assets[0].owner.user.username;
             link = data.assets[0].permalink;
 
-            deck += `<div class="card">
+            deck += `<div class="card" style="width: 20rem">
                         <a href="${link}">
                             <img class="card-img-top" src="${image}" alt="No image found" width="256" height="256">
                         </a>
