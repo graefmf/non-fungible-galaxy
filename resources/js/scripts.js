@@ -15,12 +15,12 @@ function getAssets(){
         var owner;
         var link;
         var image;
-        var num_assets = 15;
+        var num_assets = data.assets.length;
         for(var i = 0; i < num_assets; i++){
-            title = data.assets[0].name;
-            image = data.assets[0].image_url;
-            owner = data.assets[0].owner.user.username;
-            link = data.assets[0].permalink;
+            title = data.assets[i].name;
+            image = data.assets[i].image_url;
+            owner = data.assets[i].owner.user.username;
+            link = data.assets[i].permalink;
 
             deck += `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                         <div class="card">
