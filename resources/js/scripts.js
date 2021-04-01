@@ -28,6 +28,8 @@ function getAssets(){
                 }
             })
 
+            console.log(group);
+
             $('#'+ group).append( 
                     `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                         <div class="card">
