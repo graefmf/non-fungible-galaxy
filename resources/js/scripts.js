@@ -16,7 +16,7 @@ function getAssets(){
         var group;
         var num_assets = data.assets.length;
 
-        for(var i = 0; i < num_assets; i++){
+        for(var i = num_assets - 1; i >= 0 ; i--){
             title = data.assets[i].name;
             image = data.assets[i].image_url;
             owner = data.assets[i].owner.user.username;
@@ -28,7 +28,7 @@ function getAssets(){
                     break;
                 }
             }
-            
+
             console.log('#'+ group);
             $('#'+ group).append( 
                     `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
