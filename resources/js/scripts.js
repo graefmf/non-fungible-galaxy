@@ -7,7 +7,7 @@ function getAssets(){
     const url = `https://api.opensea.io/api/v1/assets?order_direction=${order_direction}&offset=${offset}&limit=${limit}&collection=non-fungible-galaxy`;
 
     $.ajax({url:url, dataType:"json"}).then(function(data) {
-        //console.log(data);
+        console.log(data);
 
 
         var owner;
@@ -21,15 +21,13 @@ function getAssets(){
             image = data.assets[i].image_url;
             owner = data.assets[i].owner.user.username;
             link = data.assets[i].permalink;
-            
-            data.assets[i].traits.foreach(function(item){
-                if(item.trait_type == 'Collection'){
-                    group = item.value.replace(/\s+/g, '-');;
+
+            for(var j = 0; j < 6; i++){
+                if(data.assets[i].traits[j].trait_type == 'Collection'){
+                    group = (data.assets[i].traits[j].value).replace(/\s+/g, '-');
                 }
-            })
-
-            console.log(group);
-
+            }
+            console.log('#'+ group);
             $('#'+ group).append( 
                     `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                         <div class="card">
