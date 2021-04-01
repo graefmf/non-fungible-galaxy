@@ -34,7 +34,9 @@ function getAssets(){
                     `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                         <div class="card">
                             <a href="${link}">
-                                <img class="card-img-top" src="${image}" alt="No image found" style="width: 20rem;">
+                                <div class="zoom">
+                                    <img class="card-img-top" src="${image}" alt="No image found" style="width: 20rem;">
+                                </div>
                             </a>
                             <div class="card-body text-center">
                                 <div class="text">
