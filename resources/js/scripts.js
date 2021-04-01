@@ -25,6 +25,7 @@ function getAssets(){
             for(var j = 0; j < 6; i++){
                 if(data.assets[i].traits[j].trait_type == 'Collection'){
                     group = (data.assets[i].traits[j].value).replace(/\s+/g, '-');
+                    break;
                 }
             }
             console.log('#'+ group);
