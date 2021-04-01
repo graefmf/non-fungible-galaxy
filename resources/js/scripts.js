@@ -22,12 +22,13 @@ function getAssets(){
             owner = data.assets[i].owner.user.username;
             link = data.assets[i].permalink;
 
-            for(var j = 0; j < 6; i++){
+            for(var j = 0; j < 6; j++){
                 if(data.assets[i].traits[j].trait_type == 'Collection'){
                     group = (data.assets[i].traits[j].value).replace(/\s+/g, '-');
                     break;
                 }
             }
+            
             console.log('#'+ group);
             $('#'+ group).append( 
                     `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
