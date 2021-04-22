@@ -9,7 +9,6 @@ function loadCollections(){
     $.ajax({url:url, dataType:"json"}).then(function(data) {
         console.log(data);
 
-
         var owner;
         var link;
         var image;
@@ -63,7 +62,7 @@ function loadByType(){
     $.ajax({url:url, dataType:"json"}).then(function(data) {
         console.log(data);
 
-
+        var count = 0;
         var owner;
         var link;
         var image;
@@ -95,10 +94,11 @@ function loadByType(){
                                     </div>
                                 </div>
                             </div>`
-                    );          
+                    );
+                    count++;          
                     break;
                 }
             }
-        } 
+        }
     });
 }
