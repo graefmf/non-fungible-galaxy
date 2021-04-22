@@ -1,4 +1,4 @@
-function getAssets(){
+function loadByCollection(){
 
     order_direction =  'desc';
     offset = '0';
@@ -52,34 +52,60 @@ function getAssets(){
 }
 
 
-function loadPlanets(){
-    console.log("Loaded Planets");
-}
+function loadByType(group){
+    order_direction =  'desc';
+    offset = '0';
+    limit = '20';
 
-function loadMainSequence(){
+    const url = `https://api.opensea.io/api/v1/assets?order_direction=${order_direction}&offset=${offset}&limit=${limit}&collection=non-fungible-galaxy`;
 
-}
+    $.ajax({url:url, dataType:"json"}).then(function(data) {
+        console.log(data);
 
-function loadRedGiants(){
 
-}
+        var owner;
+        var link;
+        var image;
+        var group;
+        var num_assets = data.assets.length;
 
-function loadRedSuperGiants(){
+        for(var i = 0; i < num_assets; i++){
+            title = data.assets[i].name;
+            image = data.assets[i].image_url;
+            owner = data.assets[i].owner.user.username;
+            link = data.assets[i].permalink;
 
-}
+            for(var j = 0; j < 6; j++){
+                if(data.assets[i].traits[j].trait_type == 'Type'){
+                    group = data.assets[i].traits[j].value;
+                    break;
+                }
+            }
+            
+            for(var j = 0; j < 6; j++){
+                if(data.assets[i].traits[j].value == group){
+                    
+                    console.log('#'+ group);
+                    $('#'+ group).prepend( 
+                            `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                                <div class="card">
+                                    <a href="${link}">
+                                        <div class="zoom">
+                                            <img class="card-img-top" src="${image}" alt="No image found" style="width: 20rem;">
+                                        </div>
+                                    </a>
+                                    <div class="card-body text-center">
+                                        <div class="text">
+                                            <h5 class="card-title">Owner: ${owner}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`
+                    );
 
-function loadWhiteDwarfs(){
-
-}
-
-function loadNeutronStars(){
-
-}
-
-function loadBlackHoles(){
-
-}
-
-function loadAsteroids(){
-
+                    break;
+                }
+            }            
+        } 
+    });
 }

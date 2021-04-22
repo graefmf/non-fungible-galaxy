@@ -48,3 +48,58 @@ app.get('/main', function(req, res) {
 	});
 });
 
+app.get('/planets', function(req, res) {
+	res.render('pages/planets',{
+		local_css:"style.css",
+		my_title:"/planets"
+	});
+});
+
+app.get('/main-sequence', function(req, res) {
+	res.render('pages/main-sequence',{
+		local_css:"style.css",
+		my_title:"/main-sequence"
+	});
+});
+
+app.get('/red-giants', function(req, res) {
+	res.render('pages/red-giants',{
+		local_css:"style.css",
+		my_title:"/red-giants"
+	});
+});
+
+app.get('/red-super-giants', function(req, res) {
+	res.render('pages/red-super-giants',{
+		local_css:"style.css",
+		my_title:"/red-super-giants"
+	});
+});
+
+app.get('/white-dwarfs', function(req, res) {
+	res.render('pages/white-dwarfs',{
+		local_css:"style.css",
+		my_title:"/white-dwarfs"
+	});
+});
+
+app.get('/neutron-stars', function(req, res) {
+	res.render('pages/neutron-stars',{
+		local_css:"style.css",
+		my_title:"neutron-stars"
+	});
+});
+
+app.get('/black-holes', function(req, res) {
+	res.render('pages/black-holes',{
+		local_css:"style.css",
+		my_title:"/black-holes"
+	});
+});
+
+app.get('/asteroids', function(req, res) {
+	res.render('pages/asteroids',{
+		local_css:"style.css",
+		my_title:"/asteroids"
+	});
+});
