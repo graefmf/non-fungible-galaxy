@@ -53,6 +53,9 @@ function loadByCollection(){
 
 
 function loadByType(group){
+
+    groupID = group.replace(/\s+/g, '-');
+
     order_direction =  'desc';
     offset = '0';
     limit = '20';
@@ -74,19 +77,12 @@ function loadByType(group){
             image = data.assets[i].image_url;
             owner = data.assets[i].owner.user.username;
             link = data.assets[i].permalink;
-
-            for(var j = 0; j < 6; j++){
-                if(data.assets[i].traits[j].trait_type == 'Type'){
-                    group = data.assets[i].traits[j].value;
-                    break;
-                }
-            }
             
             for(var j = 0; j < 6; j++){
                 if(data.assets[i].traits[j].value == group){
                     
-                    console.log('#'+ group);
-                    $('#'+ group).prepend( 
+                    console.log('#'+ groupID);
+                    $('#'+ groupID).prepend( 
                             `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
                                 <div class="card">
                                     <a href="${link}">
