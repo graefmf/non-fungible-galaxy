@@ -22,7 +22,7 @@ function loadCollections(){
             owner = data.assets[i].owner.user.username;
             link = data.assets[i].permalink;
 
-            for(var j = 0; j < 6; j++){
+            for(var j = 0; j < 7; j++){
                 if(data.assets[i].traits[j].trait_type == 'Collection'){
                     group = (data.assets[i].traits[j].value).replace(/\s+/g, '-');
                     break;
@@ -76,7 +76,7 @@ function loadByType(){
             owner = data.assets[i].owner.user.username;
             link = data.assets[i].permalink;
             
-            for(var j = 0; j < 6; j++){
+            for(var j = 0; j < 7; j++){
                 if(data.assets[i].traits[j].trait_type == 'Type'){
                     group = (data.assets[i].traits[j].value).replace(/\s+/g, '-');
                     console.log('#'+ group);
