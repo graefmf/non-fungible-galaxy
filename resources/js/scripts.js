@@ -50,3 +50,36 @@ function getAssets(){
         } 
     });
 }
+
+
+function loadPlanets(){
+
+}
+
+function loadMainSequence(){
+
+}
+
+function loadRedGiants(){
+
+}
+
+function loadRedSuperGiants(){
+
+}
+
+function loadWhiteDwarfs(){
+
+}
+
+function loadNeutronStars(){
+
+}
+
+function loadBlackHoles(){
+
+}
+
+function loadAsteroids(){
+
+}
