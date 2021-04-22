@@ -53,7 +53,7 @@ function getAssets(){
 
 
 function loadPlanets(){
-
+    console.log("Loaded Planets");
 }
 
 function loadMainSequence(){
