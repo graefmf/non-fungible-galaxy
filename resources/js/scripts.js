@@ -79,27 +79,26 @@ function loadByType(){
             for(var j = 0; j < 6; j++){
                 if(data.assets[i].traits[j].trait_type == 'Type'){
                     group = (data.assets[i].traits[j].value).replace(/\s+/g, '-');
+                    console.log('#'+ group);
+                    $('#'+ group).prepend( 
+                            `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                                <div class="card">
+                                    <a href="${link}">
+                                        <div class="zoom">
+                                            <img class="card-img-top" src="${image}" alt="No image found" style="width: 20rem;">
+                                        </div>
+                                    </a>
+                                    <div class="card-body text-center">
+                                        <div class="text">
+                                            <h5 class="card-title">Owner: ${owner}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`
+                    );          
                     break;
                 }
             }
-            
-            console.log('#'+ group);
-            $('#'+ group).prepend( 
-                    `<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                        <div class="card">
-                            <a href="${link}">
-                                <div class="zoom">
-                                    <img class="card-img-top" src="${image}" alt="No image found" style="width: 20rem;">
-                                </div>
-                            </a>
-                            <div class="card-body text-center">
-                                <div class="text">
-                                    <h5 class="card-title">Owner: ${owner}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`
-            );          
         } 
     });
 }
